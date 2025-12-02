@@ -18,4 +18,19 @@ public class HomePage extends BasePage {
 
         return new SidePanel(driver);
     }
+    @FindBy(css = ".card:nth-child(1)")
+    WebElement elements;
+
+    public SidePanel selectElements() {
+        //click(elements);
+        clickWithJS(elements,0,300);
+        return new SidePanel(driver);
+    }
+    @FindBy(css = ".card:nth-child(3)")
+    WebElement alertsFrameWindows;
+
+    public SidePanel selectAlertsFrameWindows() {
+        clickWithJS(alertsFrameWindows,0,300);
+        return new SidePanel(driver);
+    }
 }
